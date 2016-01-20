@@ -3,9 +3,9 @@
 # compile
 harp compile
 
-# discard CNAME and .nojekyll
-#git checkout -- www/CNAME
-#git checkout -- www/.nojekyll
+# copy CNAME and .nojekyll
+cp ./github_pages/CNAME ./www/
+cp ./github_pages/.nojekyll ./www/.nojekyll
 
 # push to master branch
 git add .
