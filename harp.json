@@ -1,9 +1,9 @@
 {
   "globals": {
-    "title": "Артемий Федосеев",
-    "description": "Официальный сайт Артемия Федосеева",
+    "title": "Artemij Fedosejev",
+    "description": "Artemij Fedosejev is a web development instructor and mentor.",
     "service": {
-      "analytics": "UA-1519369-20"
+      "analytics": "UA-1519369-7"
     }
   }
 }

@@ -1,0 +1,35 @@
+<section class="content-section">
+  <h3 class="content-header">Blog</h3>
+  <ul>
+
+  <%
+    var blogPosts = public.blogPosts._data.blogPosts;
+    var NUMBER_OF_POSTS = 3;
+    var counter = 0;
+
+    var blogSlug;
+    var blogPost;
+
+    while (counter < NUMBER_OF_POSTS) {
+
+      blogSlug = blogPosts[blogPosts.length - (counter + 1)];
+      blogPost = public.blogPosts[blogSlug]._data.index;
+  %>
+
+    <li>
+      <a href="/blog/<%- blogSlug %>">
+        <%- blogPost.title %>
+      </a>
+    </li>
+
+  <%
+      counter = counter + 1;
+
+      if (counter === blogPosts.length) {
+        counter = NUMBER_OF_POSTS;
+      }
+    }
+  %>
+
+  </ul>
+</section>

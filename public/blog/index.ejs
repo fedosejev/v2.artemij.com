@@ -1,0 +1,16 @@
+<article class="blog-list-page">
+  <div class="container">
+    <ul class="blog-list">
+    <% public.blog._data.blog.reverse().forEach(function (blogSlug) { %>
+      <li>
+        <small>
+          <%= public.blog[blogSlug]._data.index.dateString %>
+        </small>
+        <a href="/blog/<%= blogSlug %>">
+          <%= public.blog[blogSlug]._data.index.title %>
+        </a>
+      </li>
+    <% }); %>
+    </ul>
+  </div>
+</article>

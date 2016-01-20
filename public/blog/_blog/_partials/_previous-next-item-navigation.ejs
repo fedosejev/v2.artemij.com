@@ -1,0 +1,31 @@
+<%
+
+var position;
+var prevLink;
+var nextLink;
+var blog = public.blog._data.blog;
+var currentBlogSlug = current.path[current.path.length - 2];
+
+if (blog[blog.length - 1] !== currentBlogSlug) {
+  position = blog.indexOf(currentBlogSlug);
+  prevLink = '<a href="/blog/' + blog[position + 1] + '"><span class="fa fa-arrow-left"></span> Previous</a>';
+} else {
+  prevLink = '<span class="fa fa-arrow-left"></span> Previous';
+}
+
+if (blog[0] !== currentBlogSlug) {
+  position = blog.indexOf(currentBlogSlug);
+  nextLink = '<a href="/blog/' + blog[position - 1] + '">Next <span class="fa fa-arrow-right"></a>';
+} else {
+  nextLink = 'Next <span class="fa fa-arrow-right"></a>';
+}
+
+%>
+
+<div class="previous-next-item-navigation-links">
+  <div class="container">
+    <span class="nav-item"><%- prevLink %></span>
+    <span class="nav-item"><%- nextLink %></span>
+  </div>
+</div>
+

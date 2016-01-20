@@ -1,0 +1,7 @@
+{
+  "blog": [],
+  "index": {
+    "title": "Blog",
+    "layout": "_blog_list/_layout"
+  }
+}
