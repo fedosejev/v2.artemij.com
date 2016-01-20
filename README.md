@@ -1,2 +1,2 @@
 # Artemij's website.
-Source code for artemij.com
+Source code for http://artemij.com.
