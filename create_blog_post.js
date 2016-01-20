@@ -46,7 +46,7 @@ mkdirp(directoryPath, function (error) {
 
     console.log('✓ Copied index.ejs');
 
-    addThoughtSlugToListOfThoughts(titleSlug);
+    addBlogPostSlugToAListOfBlogPostSlugs(titleSlug);
 
     console.log('✓ Added ' + titleSlug + ' to ./public/blog/_data.json');
   });
@@ -76,7 +76,7 @@ function copyIndexFile(toLocation) {
   fs.createReadStream(SOURCE_FILE).pipe(fs.createWriteStream(toLocation + '/' + FILE_NAME));
 }
 
-function addBlogPostSlugToListOfBlogPosts(blogPostSlug) {
+function addBlogPostSlugToAListOfBlogPostSlugs(blogPostSlug) {
   var listOfBlogPosts = JSON.parse(fs.readFileSync('./public/blog/_data.json', 'utf8'));
 
   if (listOfBlogPosts.blog.indexOf(blogPostSlug) === -1) {

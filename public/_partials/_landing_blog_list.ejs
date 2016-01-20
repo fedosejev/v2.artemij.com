@@ -3,21 +3,21 @@
   <ul>
 
   <%
-    var blogPosts = public.blogPosts._data.blogPosts;
-    var NUMBER_OF_POSTS = 3;
+    var blogPosts = public.blog._data.blogPosts;
+    var NUMBER_OF_ENTRIES = 3;
     var counter = 0;
 
-    var blogSlug;
+    var blogPostSlug;
     var blogPost;
 
-    while (counter < NUMBER_OF_POSTS) {
+    while (counter < NUMBER_OF_ENTRIES) {
 
-      blogSlug = blogPosts[blogPosts.length - (counter + 1)];
-      blogPost = public.blogPosts[blogSlug]._data.index;
+      blogPostSlug = blogPosts[blogPosts.length - (counter + 1)];
+      blogPost = public.blog[blogPostSlug]._data.index;
   %>
 
     <li>
-      <a href="/blog/<%- blogSlug %>">
+      <a href="/blog/<%- blogPostSlug %>">
         <%- blogPost.title %>
       </a>
     </li>
@@ -26,7 +26,7 @@
       counter = counter + 1;
 
       if (counter === blogPosts.length) {
-        counter = NUMBER_OF_POSTS;
+        counter = NUMBER_OF_ENTRIES;
       }
     }
   %>
