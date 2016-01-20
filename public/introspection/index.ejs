@@ -1,0 +1,11 @@
+<article class="container introspection-list-page">
+  <ul class="introspection-list">
+  <% public.introspection._data.introspection.reverse().forEach(function (slug) { %>
+    <li>
+      <a href="/introspection/<%= slug %>">
+        <%= public.introspection[slug]._data.index.title %>
+      </a>
+    </li>
+  <% }); %>
+  </ul>
+</article>

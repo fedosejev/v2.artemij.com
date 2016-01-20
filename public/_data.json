@@ -1,0 +1,9 @@
+{
+  "index": {
+    "title": "Официальный сайт",
+    "layout": "_landing/_layout"
+  },
+  "sitemap": {
+    "layout": false
+  }
+}

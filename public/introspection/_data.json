@@ -1,0 +1,9 @@
+{
+  "introspection": [
+    "love"
+  ],
+  "index": {
+    "title": "Интроспекция",
+    "layout": "_introspection_list/_layout"
+  }
+}

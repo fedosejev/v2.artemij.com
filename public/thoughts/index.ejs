@@ -1,0 +1,16 @@
+<article class="thought-list-page">
+  <div class="container">
+    <ul class="thought-list">
+    <% public.thoughts._data.thoughts.reverse().forEach(function (thoughtSlug) { %>
+      <li>
+        <small>
+          <%= public.thoughts[thoughtSlug]._data.index.dateString %>
+        </small>
+        <a href="/thoughts/<%= thoughtSlug %>">
+          <%= public.thoughts[thoughtSlug]._data.index.title %>
+        </a>
+      </li>
+    <% }); %>
+    </ul>
+  </div>
+</article>

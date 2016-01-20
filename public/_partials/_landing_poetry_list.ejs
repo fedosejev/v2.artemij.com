@@ -1,0 +1,35 @@
+<section class="content-section">
+  <h3 class="content-header">Стихи</h3>
+  <ul>
+
+  <%
+    var poetry = public.poetry._data.poetry;
+    var NUMBER_OF_THOUGHTS = 3;
+    var counter = 0;
+
+    var poetrySlug;
+    var thought;
+
+    while (counter < NUMBER_OF_THOUGHTS) {
+
+      poetrySlug = poetry[poetry.length - (counter + 1)];
+      thought = public.poetry[poetrySlug]._data.index;
+  %>
+
+    <li>
+      <a href="/poetry/<%- poetrySlug %>">
+        <%- thought.title %>
+      </a>
+    </li>
+
+  <%
+      counter = counter + 1;
+
+      if (counter === poetry.length) {
+        counter = NUMBER_OF_THOUGHTS;
+      }
+    }
+  %>
+
+  </ul>
+</section>

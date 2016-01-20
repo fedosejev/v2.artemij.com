@@ -1,0 +1,31 @@
+<%
+
+var position;
+var prevLink;
+var nextLink;
+var thoughts = public.thoughts._data.thoughts;
+var currentThoughtSlug = current.path[current.path.length - 2];
+
+if (thoughts[thoughts.length - 1] !== currentThoughtSlug) {
+  position = thoughts.indexOf(currentThoughtSlug);
+  prevLink = '<a href="/thoughts/' + thoughts[position + 1] + '"><span class="fa fa-arrow-left"></span> Назад</a>';
+} else {
+  prevLink = '<span class="fa fa-arrow-left"></span> Назад';
+}
+
+if (thoughts[0] !== currentThoughtSlug) {
+  position = thoughts.indexOf(currentThoughtSlug);
+  nextLink = '<a href="/thoughts/' + thoughts[position - 1] + '">Вперёд <span class="fa fa-arrow-right"></a>';
+} else {
+  nextLink = 'Вперёд <span class="fa fa-arrow-right"></a>';
+}
+
+%>
+
+<div class="previous-next-item-navigation-links">
+  <div class="container">
+    <span class="nav-item"><%- prevLink %></span>
+    <span class="nav-item"><%- nextLink %></span>
+  </div>
+</div>
+

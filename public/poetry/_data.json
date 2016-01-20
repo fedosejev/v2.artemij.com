@@ -1,0 +1,12 @@
+{
+  "poetry": [
+    "zhe",
+    "vozmozhno",
+    "vopreki",
+    "kak-eshyo-nikogda"
+  ],
+  "index": {
+    "title": "Стихи",
+    "layout": "_poetry_list/_layout"
+  }
+}

@@ -1,0 +1,35 @@
+<section class="content-section">
+  <h3 class="content-header">Мысли</h3>
+  <ul>
+
+  <%
+    var thoughts = public.thoughts._data.thoughts;
+    var NUMBER_OF_THOUGHTS = 3;
+    var counter = 0;
+
+    var thoughtSlug;
+    var thought;
+
+    while (counter < NUMBER_OF_THOUGHTS) {
+
+      thoughtSlug = thoughts[thoughts.length - (counter + 1)];
+      thought = public.thoughts[thoughtSlug]._data.index;
+  %>
+
+    <li>
+      <a href="/thoughts/<%- thoughtSlug %>">
+        <%- thought.title %>
+      </a>
+    </li>
+
+  <%
+      counter = counter + 1;
+
+      if (counter === thoughts.length) {
+        counter = NUMBER_OF_THOUGHTS;
+      }
+    }
+  %>
+
+  </ul>
+</section>

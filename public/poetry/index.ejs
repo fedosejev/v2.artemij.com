@@ -1,0 +1,16 @@
+<article class="thought-list-page">
+  <div class="container">
+    <ul class="thought-list">
+    <% public.poetry._data.poetry.reverse().forEach(function (poetrySlug) { %>
+      <li>
+        <small>
+          <%= public.poetry[poetrySlug]._data.index.dateString %>
+        </small>
+        <a href="/poetry/<%= poetrySlug %>">
+          <%= public.poetry[poetrySlug]._data.index.title %>
+        </a>
+      </li>
+    <% }); %>
+    </ul>
+  </div>
+</article>
